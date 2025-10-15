@@ -63,7 +63,7 @@ const Projects: React.FC = () => {
   const mernProjects = [
     {
       title: 'Htwo Freelance Project',
-      description: 'A full-stack Cloud service provider solution with real-time inventory management backend is in working state, secure payment processing, and admin dashboard. Features include user authentication, shopping cart, order tracking, and responsive design.',
+      description: 'A full-stack Cloud more than 15+ pages  service provider solution with real-time inventory management backend is in working state, secure payment processing, and admin dashboard. Features include user authentication, shopping cart, order tracking, and responsive design.',
       techStack: ['React', 'Node.js', 'Tailwind CSS', 'Lucide React', 'EmailJS', 'TypeScript', 'Shadcn'],
       liveUrl: 'https://htwo.vercel.app/',
       githubUrl: 'https://github.com/amarjeet-choudhary666/Htwo',
