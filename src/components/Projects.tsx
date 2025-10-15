@@ -75,7 +75,7 @@ const Projects: React.FC = () => {
       description: 'An intelligent AI-powered Todo App integrated with Gemini using real-time data with PostgreSQL and Drizzle. Features Docker containerization and smart task automation to enhance productivity.',
       techStack: ['React', 'Node.js', 'PostgreSQL', 'Drizzle ORM', 'Google Gemini AI', 'Docker'],
       liveUrl: '#',
-      githubUrl: 'https://github.com/amarjeet-choudhary666',
+      githubUrl: 'https://github.com/amarjeet-choudhary666/leaderboard_project',
       gradient: 'from-cyan-500 to-blue-600',
       image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop&crop=center'
     },
@@ -84,7 +84,7 @@ const Projects: React.FC = () => {
       description: 'Full-stack e-commerce platform like geer.in with CRUD operations and JWT-based authentication. Features user management, product catalog, shopping cart, and secure payment processing.',
       techStack: ['React', 'Node.js', 'Express', 'MongoDB', 'Mongoose', 'JWT', 'Bcrypt'],
       liveUrl: '#',
-      githubUrl: 'https://github.com/amarjeet-choudhary666',
+      githubUrl: 'https://github.com/amarjeet-choudhary666/e-commerce-like-geer.in-platform',
       gradient: 'from-orange-500 to-red-600',
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&crop=center'
     },
