@@ -1,0 +1,463 @@
+/* Performance optimizations */
+* {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
+  background: #000000;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Enhanced animations and effects - Optimized */
+@keyframes aurora {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.aurora-bg {
+  background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c, #4facfe, #00f2fe);
+  background-size: 400% 400%;
+  animation: aurora 15s ease infinite;
+}
+
+/* Glowing text effect */
+.glow-text {
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.5),
+    0 0 20px rgba(59, 130, 246, 0.3),
+    0 0 30px rgba(59, 130, 246, 0.2);
+}
+
+/* Particle trail effect */
+@keyframes particle-trail {
+  0% {
+    transform: translateX(0) translateY(0) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(100px) translateY(-100px) scale(0);
+    opacity: 0;
+  }
+}
+
+.particle-trail {
+  animation: particle-trail 2s ease-out infinite;
+}
+
+/* Magnetic hover effect */
+.magnetic-hover {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.magnetic-hover:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* Neon border effect */
+.neon-border {
+  position: relative;
+  border: 2px solid transparent;
+  background: linear-gradient(45deg, #667eea, #764ba2) padding-box,
+    linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c) border-box;
+}
+
+/* Holographic effect */
+.holographic {
+  background: linear-gradient(45deg,
+      rgba(255, 0, 150, 0.1) 0%,
+      rgba(0, 255, 255, 0.1) 25%,
+      rgba(255, 255, 0, 0.1) 50%,
+      rgba(255, 0, 150, 0.1) 75%,
+      rgba(0, 255, 255, 0.1) 100%);
+  background-size: 200% 200%;
+  animation: holographic-shift 3s ease infinite;
+}
+
+@keyframes holographic-shift {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Breathing animation */
+@keyframes breathe {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.breathe {
+  animation: breathe 4s ease-in-out infinite;
+}
+
+/* Constellation lines */
+.constellation-line {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform-origin: left center;
+}
+
+/* Optimized meteor shower effect */
+@keyframes meteor {
+  0% {
+    transform: translateX(-50px) translateY(-50px);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(200px) translateY(200px);
+    opacity: 0;
+  }
+}
+
+.meteor {
+  animation: meteor 4s linear infinite;
+  will-change: transform, opacity;
+}
+
+/* Enhanced button hover effects */
+.btn-cosmic {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-cosmic::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-cosmic:hover::before {
+  left: 100%;
+}
+
+/* Skill card hover glow */
+.skill-card {
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(59, 130, 246, 0.2);
+}
+
+/* Text reveal animation */
+@keyframes text-reveal {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.text-reveal {
+  animation: text-reveal 1s ease-out forwards;
+}
+
+/* Galax
+y Planet Animations */
+@keyframes planetOrbit1 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(50px, -30px) rotate(90deg);
+  }
+
+  50% {
+    transform: translate(0, -60px) rotate(180deg);
+  }
+
+  75% {
+    transform: translate(-50px, -30px) rotate(270deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes planetOrbit2 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(-40px, 25px) rotate(90deg);
+  }
+
+  50% {
+    transform: translate(0, 50px) rotate(180deg);
+  }
+
+  75% {
+    transform: translate(40px, 25px) rotate(270deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes planetOrbit3 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(30px, -20px) rotate(90deg);
+  }
+
+  50% {
+    transform: translate(0, -40px) rotate(180deg);
+  }
+
+  75% {
+    transform: translate(-30px, -20px) rotate(270deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes planetOrbit4 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(-25px, 15px) rotate(90deg);
+  }
+
+  50% {
+    transform: translate(0, 30px) rotate(180deg);
+  }
+
+  75% {
+    transform: translate(25px, 15px) rotate(270deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes planetOrbit5 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(35px, -25px) rotate(90deg);
+  }
+
+  50% {
+    transform: translate(0, -50px) rotate(180deg);
+  }
+
+  75% {
+    transform: translate(-35px, -25px) rotate(270deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes nebulaShift {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.1;
+  }
+
+  50% {
+    transform: scale(1.1) rotate(2deg);
+    opacity: 0.15;
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.1;
+  }
+}
+
+/* Enhanced galaxy effects */
+.galaxy-glow {
+  box-shadow:
+    0 0 20px rgba(59, 130, 246, 0.3),
+    0 0 40px rgba(147, 51, 234, 0.2),
+    0 0 60px rgba(236, 72, 153, 0.1);
+}
+
+/* Shooting stars */
+@keyframes shootingStar {
+  0% {
+    transform: translateX(-100px) translateY(-100px) rotate(45deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(300px) translateY(300px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+.shooting-star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: linear-gradient(45deg, #fff, transparent);
+  border-radius: 50%;
+  animation: shootingStar 3s linear infinite;
+}
+
+.shooting-star::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 1px;
+  background: linear-gradient(90deg, #fff, transparent);
+  transform: translateX(-20px);
+}
+
+/* Solar System Animations */
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(0) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(0) rotate(-360deg);
+  }
+}
+
+@keyframes sunGlow {
+  0% {
+    box-shadow: 0 0 40px rgba(251, 191, 36, 0.6), 0 0 80px rgba(251, 191, 36, 0.3);
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    box-shadow: 0 0 60px rgba(251, 191, 36, 0.8), 0 0 120px rgba(251, 191, 36, 0.4);
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+
+/* Asteroid Belt */
+@keyframes asteroidFloat {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(180deg);
+    opacity: 0.6;
+  }
+}
+
+/* Comet Trail */
+@keyframes cometTrail {
+  0% {
+    transform: translateX(-200px) translateY(-200px) rotate(45deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(200px) translateY(200px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+.comet {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: linear-gradient(45deg, #fff, #60a5fa);
+  border-radius: 50%;
+  animation: cometTrail 8s linear infinite;
+}
+
+.comet::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), transparent);
+  transform: translateX(-30px);
+}
